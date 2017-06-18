@@ -1,0 +1,29 @@
+<div class="header">
+  <div class="content-wrapper">
+    <div class="avatar">
+      <img src="{{seller.avatar}}" height="64" width="64">
+    </div>
+    <div class="content">
+      <div class="title">
+        <span class="brand"></span>
+        <span class="name">{{seller.name}}</span>
+      </div>
+      <div class="description">
+        {{seller.description + ' / ' + seller.deliveryTime + '分钟送达'}}
+      </div>
+      <div class="supports" *ngIf="seller.supports">
+        <span class="icon"></span>
+        <span class="description">{{seller.supports[0].description}}</span>
+      </div>
+    </div>
+    <div class="support-count" *ngIf="seller.supports">
+      <span class="count">{{seller.supports.length + '个'}}</span>
+      <i class="angle right icon"></i>
+    </div>
+  </div>
+  <div class="bulletin-wrapper">
+    <span class="bulletin-title"></span>
+    <span class="bulletin-text">{{seller.bulletin}}</span>
+    <i class="angle right icon"></i>
+  </div>
+</div>
