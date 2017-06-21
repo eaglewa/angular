@@ -3,7 +3,7 @@
  */
 export class Seller {
 
-  constructor(){
+  constructor() {
 
   }
 

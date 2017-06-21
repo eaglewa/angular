@@ -1,1 +1,12 @@
 <app-header></app-header>
+<div class="body">
+  <div class="body-menu">
+    <div class="ui three item menu">
+      <a class="item" [routerLink]="['/goods']" routerLinkActive="active red">商品</a>
+      <a class="item" [routerLink]="['/ratings']" routerLinkActive="active red">评价</a>
+      <a class="item" [routerLink]="['/seller']" routerLinkActive="active red">商家</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+

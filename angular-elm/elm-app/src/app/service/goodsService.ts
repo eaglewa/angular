@@ -2,20 +2,21 @@ import {Http} from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 import {Injectable} from "@angular/core";
 import {Seller} from "../model/seller";
+import {Goods} from "../model/goods";
 /**
  * Created by wangao on 2017/6/8.
  */
 
 @Injectable()
-export class SellerService {
+export class GoodsService {
 
-  private url = 'api/seller';
+  private url = 'api/goods';
 
   constructor(private http: Http) { }
 
-  getSeller(): Promise<Seller> {
+  getGoods(): Promise<Seller> {
     return this.http.get(this.url).toPromise()
-    .then(res => res.json().data as Seller || {});
+    .then(res => res.json().data as Goods || {});
   }
 
 
